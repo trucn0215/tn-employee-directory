@@ -1,11 +1,11 @@
 import React from "react";
 
-function Body() {
+function Body( {users} ) {
     return (
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title">Special title treatment</h5>
-                <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                <h5 className="card-title"> List of Users</h5>
+                {users.map(users => <p className="userName card-text">{users.name.first} {users.name.last}</p>)}
             </div>
         </div>
     );
