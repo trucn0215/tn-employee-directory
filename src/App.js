@@ -1,12 +1,12 @@
 import React from "react";
-import Body from "./components/Body"
 import Header from "./components/Header";
+import Body from "./components/Body"
 
 function App() {
   return (
     <div className="container">
-      <Body/>
       <Header/>
+      <Body/>
     </div>
   );
 }
