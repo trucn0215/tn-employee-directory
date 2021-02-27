@@ -1,9 +1,9 @@
-import React from "react";
+import React, {Component} from "react";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import Body from "./components/Body";
 
-class App extends React.Component {
+class App extends Component {
 
   state = {
     users: [
