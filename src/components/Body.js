@@ -12,9 +12,9 @@ function Body({ users }) {
 
             <div className="card-body border border-primary row">
                 <div className="col">{users.map(users => <p className="userName card-text">{users.name.first} {users.name.last}</p>)}</div>
-                {/* <div className="col">{users.map(users => <p className="age card-text">{users.dob.age}</p>)}</div> */}
-                {/* <div className="col">{users.map(users => <p className="email card-text">{users.email}</p>)}</div> */}
-                {/* <div className="col">{users.map(users => <p className="cell card-text">{users.cell}</p>)}</div> */}
+                <div className="col">{users.map(users => <p className="age card-text">{users.dob.age}</p>)}</div>
+                <div className="col">{users.map(users => <p className="email card-text">{users.email}</p>)}</div>
+                <div className="col">{users.map(users => <p className="cell card-text">{users.cell}</p>)}</div>
             </div>
         </div>
     );
