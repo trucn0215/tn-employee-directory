@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Header from "./components/Header";
 import Search from "./components/Search";
 import Body from "./components/Body";
+// import API from "./utils/API";
 
 class App extends Component {
 
@@ -177,6 +178,12 @@ class App extends Component {
       }
     ]
   }
+
+  // searchUser = query => {
+  //   API.getUsers()
+  //     .then(res => this.setState({ result: res.data }))
+  //     .catch(err => console.log(err));
+  // };
 
   render() {
     return (
