@@ -13,16 +13,18 @@ function Body( props ) {
             </div>
             <div className="border border-primary row pt-2 pb-2">
                 <div className="col-2">
-                    <img src={props.image} alt="h5umbnail"/>)
+                    {props.usersInfo.map(user => <img src={user.picture.medium} alt="h5umbnail"/>)}
                 </div>
 
-                <h5 className="col-2"> {props.name}</h5>
+                <h5 className="col-2"> {props.usersInfo.map(user => <p className="userName card-text">{user.name.first} {user.name.last}</p>)}</h5>
+                
+                <h5 className="col-1">
+                    {props.usersInfo.map(user => <p className="age card-text">{user.dob.age}</p>)}
+                </h5>
 
-                <h5 className="col-1">{props.age}</h5>
-
-                <h5 className="col-4">{props.email}</h5>
-
-                <h5 className="col-3">{props.cell}</h5>
+                <h5 className="col-4">{props.usersInfo.map(user => <p className="email">{user.email}</p>)}</h5>
+                
+                <h5 className="col-3">{props.usersInfo.map(user => <p className="cell">{user.cell}</p>)}</h5>
             </div>
         </div>
     );
