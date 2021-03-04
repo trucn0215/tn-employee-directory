@@ -3,7 +3,7 @@ const BASEURL = "https://randomuser.me/api/";
 
 const API = {
     getUsers: function () {
-        return axios.get(BASEURL + `?results=200`);
+        return axios.get(BASEURL + `?results=10`);
     }
 }
 export default API;
