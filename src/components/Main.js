@@ -14,11 +14,8 @@ class Main extends Component {
     componentDidMount = () => {
         API.getUsers()
             .then(res => {
-
                 const newUser = res.data.results;
-
                 const userSorted = []
-
                 // console.log(newUser)
 
                 for (let i = 0; i < newUser.length; i++) {
@@ -30,22 +27,36 @@ class Main extends Component {
                         email: newUser[i].email,
                         cell: newUser[i].cell
                     }
-
                     userSorted.push(userInfo)
                 }
-
                 this.setState({ users: userSorted })
-
-                // console.log({users})
             })
     }
 
+    //function to update search state when user type in a word
+    handleSearchChange = event => {
+        this.setState({ search: event.target.value })
+    };
 
-    renderTableData() {
-        return this.state.users.map((user, index) => {
-            const { id, image, firstName, lastName, age, email, cell } = user //destructuring
+    //function to filter the list of users
+    filterUsers() {
+        const search = this.state.search.toLowerCase();
+
+        return this.state.users.filter(user => {
             return (
-                <tr key={id}>
+                user.firstName.toLowerCase().includes(search) ||
+                user.lastName.toLowerCase().includes(search)
+            )
+        })
+        // console.log(search)
+    }
+
+    //function to render a table of users
+    renderTableData = () => {
+        return this.filterUsers().map((user, index) => {
+            const { image, firstName, lastName, age, email, cell } = user //destructuring
+            return (
+                <tr key={index}>
                     <td><img src={image} alt="userImage" /></td>
                     <td>{firstName} {lastName}</td>
                     <td>{age}</td>
@@ -60,7 +71,9 @@ class Main extends Component {
         return (
             <div className="container">
                 <Header />
-                <Search />
+                <Search 
+                    handleSearchChange = {this.handleSearchChange}
+                />
 
                 <div>
                     <table id='users' className="table table-striped">
@@ -79,7 +92,6 @@ class Main extends Component {
                         </tbody>
                     </table>
                 </div>
-
             </div>
         )
     }
