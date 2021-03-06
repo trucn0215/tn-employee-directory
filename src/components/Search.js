@@ -4,6 +4,8 @@ function Search(props) {
     return (
         <form>
             <div className="form-group">
+                <p>Type to search names from the list below</p>
+
                 <input className="form-control" placeholder="Search Name" 
                     value = {props.search}
                     onChange = {props.handleSearchChange}

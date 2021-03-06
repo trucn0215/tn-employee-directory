@@ -23,4 +23,4 @@ As a user, I want to be able to view my entire employee directory at once so tha
 * [Repo Link](https://github.com/trucn0215/tn-employee-directory)
 
 ## Screenshot
-![Home Page]()
+![Home Page](./public/image/viewdemo.png)
