@@ -80,8 +80,16 @@ class Main extends Component {
                         <thead className="bg-info text-white font-weight-bold">
                             <tr>
                                 <th className="me-1">Image</th>
-                                <th className="me-4">Name</th>
-                                <th className="me-2">DoB</th>
+                                <th className="me-4">Name
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                    </button>
+                                </th>
+                                <th className="me-2">DoB
+                                    <button class="btn dropdown-toggle" data-toggle="dropdown">
+                                        <span class="caret"></span>
+                                    </button>
+                                </th>
                                 <th className="me-3">Email</th>
                                 <th className="me-3">Phone</th>
                             </tr>
