@@ -12,8 +12,14 @@ function Search(props) {
                     type= "text"
                 />
             </div>
-        </form>
 
+            <div className="mb-2">Sort the list by: {" "}
+                <button className="btn btn-outline-info">A-Z</button> {" "}
+                <button className="btn btn-outline-info">Z-A</button> {" "}
+                <button className="btn btn-outline-info">Younger to Older</button> {" "}
+                <button className="btn btn-outline-info">Older to Younger</button>
+            </div>
+        </form>
     )
 }
 

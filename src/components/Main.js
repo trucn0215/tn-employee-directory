@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import Header from "./Header";
 import Search from "./Search";
-// import Body from "./Body";
+import Body from "./Body";
 import API from "../utils/API"
 
 class Main extends Component {
@@ -77,24 +77,7 @@ class Main extends Component {
 
                 <div>
                     <table id='users' className="table table-striped">
-                        <thead className="bg-info text-white font-weight-bold">
-                            <tr>
-                                <th className="me-1">Image</th>
-                                <th className="me-4">Name
-                                    <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                        <span class="caret"></span>
-                                    </button>
-                                </th>
-                                <th className="me-2">DoB
-                                    <button class="btn dropdown-toggle" data-toggle="dropdown">
-                                        <span class="caret"></span>
-                                    </button>
-                                </th>
-                                <th className="me-3">Email</th>
-                                <th className="me-3">Phone</th>
-                            </tr>
-                        </thead>
-
+                        <Body/>
                         <tbody className="border border-primary t-2 pb-2">
                             {this.renderTableData()}
                         </tbody>
